@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="15be03ee-befd-41de-8330-dbc2ebc17e4f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1XMGiDqPmC7SRIShD55KbQuxhtO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Python.experiment">
+    <configuration name="experiment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ps03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for ps3_tests.AssignmentTests.test_find_markers_simple_rectangle" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="ps03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;ps3_tests.AssignmentTests.test_find_markers_simple_rectangle&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for ps3_tests.AssignmentTests.test_find_markers_wall_image" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="ps03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;ps3_tests.AssignmentTests.test_find_markers_wall_image&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for ps3_tests.AssignmentTests.test_get_corners_list" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="ps03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;ps3_tests.AssignmentTests.test_get_corners_list&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in ps3_tests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="ps03" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/ps3_tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.experiment" />
+        <item itemvalue="Python tests.Unittests for ps3_tests.AssignmentTests.test_find_markers_wall_image" />
+        <item itemvalue="Python tests.Unittests in ps3_tests.py" />
+        <item itemvalue="Python tests.Unittests for ps3_tests.AssignmentTests.test_get_corners_list" />
+        <item itemvalue="Python tests.Unittests for ps3_tests.AssignmentTests.test_find_markers_simple_rectangle" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="15be03ee-befd-41de-8330-dbc2ebc17e4f" name="Default Changelist" comment="" />
+      <created>1580848674097</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580848674097</updated>
+      <workItem from="1580848679410" duration="711000" />
+      <workItem from="1580901681045" duration="12312000" />
+      <workItem from="1581122959487" duration="1491000" />
+      <workItem from="1581124596762" duration="2936000" />
+      <workItem from="1581127593116" duration="15066000" />
+      <workItem from="1581146691510" duration="3511000" />
+      <workItem from="1581150281105" duration="45000" />
+      <workItem from="1581150354585" duration="2321000" />
+      <workItem from="1581152933703" duration="2078000" />
+      <workItem from="1581216382666" duration="29707000" />
+      <workItem from="1581452398118" duration="1418000" />
+      <workItem from="1581511008181" duration="2995000" />
+      <workItem from="1581539865525" duration="2042000" />
+      <workItem from="1581595966550" duration="9585000" />
+      <workItem from="1581730472813" duration="7067000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="547" y="244" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581687597942">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="547" y="244" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1581687597942" />
+    <state width="480" height="450" key="DebuggerActiveHint" timestamp="1581123444284">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="480" height="450" key="DebuggerActiveHint/0.23.1440.877@0.23.1440.877" timestamp="1581123444284" />
+    <state width="1125" height="233" key="GridCell.Tab.0.bottom" timestamp="1581737115284">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="258" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581130966408" />
+    <state width="1125" height="233" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1581737115284" />
+    <state width="1125" height="233" key="GridCell.Tab.0.center" timestamp="1581737115283">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="258" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581130966407" />
+    <state width="1125" height="233" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1581737115283" />
+    <state width="1125" height="233" key="GridCell.Tab.0.left" timestamp="1581737115279">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="258" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581130966406" />
+    <state width="1125" height="233" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1581737115279" />
+    <state width="1125" height="233" key="GridCell.Tab.0.right" timestamp="1581737115283">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="258" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581130966407" />
+    <state width="1125" height="233" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1581737115283" />
+    <state width="1125" height="242" key="GridCell.Tab.1.bottom" timestamp="1581736538804">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1125" height="242" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1581736538804" />
+    <state width="1125" height="242" key="GridCell.Tab.1.center" timestamp="1581736538803">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1125" height="242" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1581736538803" />
+    <state width="1125" height="242" key="GridCell.Tab.1.left" timestamp="1581736538802">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1125" height="242" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1581736538802" />
+    <state width="1125" height="242" key="GridCell.Tab.1.right" timestamp="1581736538803">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1125" height="242" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1581736538803" />
+    <state width="619" height="391" key="XDebugger.FullValuePopup" timestamp="1581391791593">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="619" height="391" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1581391791593" />
+    <state x="498" y="115" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581539409344">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="498" y="115" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.877@0.23.1440.877" timestamp="1581539409344" />
+    <state x="241" y="176" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581342938738">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="241" y="176" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.877@0.23.1440.877" timestamp="1581342938738" />
+    <state x="396" y="204" key="search.everywhere.popup" timestamp="1581217875618">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="396" y="204" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1581217875618" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/ps3.py</url>
+          <line>200</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-defaults>
+        <breakpoint type="python-line" />
+      </breakpoints-defaults>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ps03$experiment.coverage" NAME="experiment Coverage Results" MODIFIED="1581737115262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ps03$Unittests_for_ps3_tests_AssignmentTests_test_find_markers_wall_image.coverage" NAME="Unittests for ps3_tests.AssignmentTests.test_find_markers_wall_image Coverage Results" MODIFIED="1581731546513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ps03$Unittests_in_ps3_tests_py.coverage" NAME="Unittests in ps3_tests.py Coverage Results" MODIFIED="1581730006735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ps03$Unittests_for_ps3_tests_AssignmentTests_test_find_markers_simple_rectangle.coverage" NAME="Unittests for ps3_tests.AssignmentTests.test_find_markers_simple_rectangle Coverage Results" MODIFIED="1581728771773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ps03$Unittests_for_ps3_tests_AssignmentTests_test_get_corners_list.coverage" NAME="Unittests for ps3_tests.AssignmentTests.test_get_corners_list Coverage Results" MODIFIED="1581728785225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
