@@ -54,10 +54,8 @@ class KalmanFilter(object):
         self.covariance = (I - kalman_gain @ M) @ covariance
 
     def process(self, measurement_x, measurement_y):
-
         self.predict()
         self.correct(measurement_x, measurement_y)
-
         return self.state[0], self.state[1]
 
 
@@ -103,8 +101,6 @@ class ParticleFilter(object):
                     - template_rect (dict): Template coordinates with x, y,
                                             width, and height values.
         """
-        np.random.seed(0)
-
         self.num_particles = kwargs.get('num_particles')  # required by the autograder
         self.sigma_exp = kwargs.get('sigma_exp')  # required by the autograder
         self.sigma_dyn = kwargs.get('sigma_dyn')  # required by the autograder
@@ -117,12 +113,15 @@ class ParticleFilter(object):
         t_x = self.template_rect.get("x")
         t_y = self.template_rect.get("y")
         self.template = template
-        t_h, t_w, _ = template.shape
-        t_center = (t_w//2 + t_x, t_h//2 + t_y)
+        self.t_h, self.t_w, _ = template.shape
+        self.half_w = self.t_w//2
+        self.half_h = self.t_h // 2
+        t_center = (self.half_w + t_x, self.half_h + t_y)
         self.frame = frame
-        self.particles = self.create_gaussian_particles(mean=t_center, std=(t_w, t_h), N=self.num_particles) # Initialize your particles array. Read the docstring.
+        self.particles = self.create_gaussian_particles(mean=t_center, std=(self.t_w, self.t_h), N=self.num_particles) # Initialize your particles array. Read the docstring.
         self.weights = np.full(self.num_particles, 1/self.num_particles)  # Initialize your weights array. Read the docstring.
         # Initialize any other components you may need when designing your filter.
+        get_luma_image(self.template)
 
     def create_gaussian_particles(self, mean, std, N):
         particles = np.empty((N, 2))
@@ -181,7 +180,6 @@ class ParticleFilter(object):
         return sampled_particles
 
     def add_noise(self, particles):
-        # particles = particles + np.random.randint((self.sigma_dyn**2)*-1, self.sigma_dyn**2, particles.shape)
         particles = particles + np.random.randint((self.sigma_dyn)*-1, self.sigma_dyn, particles.shape)
 
         return particles
@@ -204,33 +202,27 @@ class ParticleFilter(object):
         Returns:
             None.
         """
-        t_width = self.template_rect.get("w")
-        half_width = t_width // 2
-        t_height = self.template_rect.get("h")
-        half_height = t_height // 2
-        template = get_luma_image(self.template.copy())
         luma_frame = get_luma_image(frame.copy())
         # template = cv2.cvtColor(self.template.copy(), cv2.COLOR_BGR2GRAY)
         # luma_frame = cv2.cvtColor(frame.copy(), cv2.COLOR_BGR2GRAY)
-        self.particles = self.resample_particles()
-        self.particles = self.add_noise(self.particles)
+        sampled_particles = self.resample_particles()
+        self.particles = self.add_noise(sampled_particles)
         x_particles = self.particles[:, 0]
         y_particles = self.particles[:, 1]
         total_weight = 0
         weights = self.weights
         for i in range(self.num_particles):
-            x_start = int(x_particles[i]-half_width)
-            x_end = int(x_particles[i]+half_width)
-            y_start = int(y_particles[i] - half_height)
-            y_end = int(y_particles[i]+half_height)
+            x_start = int(x_particles[i] - self.half_w)
+            x_end = int(x_particles[i] + self.half_w)
+            y_start = int(y_particles[i] - self.half_h)
+            y_end = int(y_particles[i] + self.half_h)
             frame_cutout = luma_frame[y_start:y_end, x_start:x_end]
-            if frame_cutout.shape == template.shape:
-                weights[i] = self.get_error_metric(template, frame_cutout)
+            if frame_cutout.shape == self.template.shape:
+                weights[i] = self.get_error_metric(self.template, frame_cutout)
             else:
                 weights[i] = 0
             total_weight += weights[i]
         self.weights = weights / total_weight
-        print(total_weight)
 
     def render(self, frame_in):
         """Visualizes current particle filter state.
@@ -264,20 +256,16 @@ class ParticleFilter(object):
         """
         x_weighted_mean = 0
         y_weighted_mean = 0
-        t_width = self.template_rect.get("w")
-        half_width = t_width // 2
-        t_height = self.template_rect.get("h")
-        half_height = t_height // 2
 
         for i in range(self.num_particles):
             x_weighted_mean += self.particles[i, 0] * self.weights[i]
             y_weighted_mean += self.particles[i, 1] * self.weights[i]
             mark_location(frame_in, (self.particles[i, 0], self.particles[i, 1]))
 
-        left_x = int(x_weighted_mean - half_width)
-        top_y = int(y_weighted_mean - half_height)
-        bottom_y = int(y_weighted_mean + half_height)
-        right_x = int(x_weighted_mean + half_width)
+        left_x = int(x_weighted_mean - self.half_w)
+        top_y = int(y_weighted_mean - self.half_h)
+        bottom_y = int(y_weighted_mean + self.half_h)
+        right_x = int(x_weighted_mean + self.half_w)
         markers = [(left_x, top_y), (left_x, bottom_y), (right_x, top_y), (right_x, bottom_y)]
         draw_box(frame_in, markers)
         x_weighted_mean_distance = 0
@@ -285,10 +273,6 @@ class ParticleFilter(object):
         for i in range(self.num_particles):
             x_weighted_mean_distance += abs(x_weighted_mean - self.particles[i, 0])
             y_weighted_mean_distance += abs(y_weighted_mean - self.particles[i, 1])
-
-        print("weighted_mean_distance")
-        print(x_weighted_mean)
-        print(y_weighted_mean)
 
         draw_circle(frame_in, (int(x_weighted_mean), int(y_weighted_mean)),
                     int(np.sqrt((int((x_weighted_mean_distance/self.num_particles)**2) +
