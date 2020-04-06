@@ -32,48 +32,172 @@ def video_frame_generator(filename):
 
 VIDEO_NAME = "out_video.mp4"
 
+## mode
+# def final_experiment():
+#     theta = 50
+#     tau = 15
+#     kernel_shape = cv2.MORPH_ELLIPSE
+#     kernel_size = (2, 2)
+#     fps = 25
+#
+#     video = load_video('person15_walking_d1_uncomp.avi')
+#     video_frames = video_frame_generator(video)
+#     frame1 = video_frames.__next__()
+#     gray_frm1 = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
+#     mhi = motion.MotionHistoryImage(tau, gray_frm1)
+#
+#     h, w, d = frame1.shape
+#     video_out = mp4_video_writer(VIDEO_NAME, (w, h), fps, False)
+#
+#     motion_history = []
+#     fr = 1
+#     while frame1 is not None:
+#         t = fr % tau
+#         frame2 = video_frames.__next__()
+#         if frame2 is None:
+#             break
+#         gray_frm2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
+#         if fr >= tau:
+#             motion_history[:-1] = motion_history[1:]
+#             motion_history[-1] = gray_frm1
+#             mode_moments = stats.mode(motion_history)
+#             binary_image = fn.get_frame_diff_binary(gray_frm2, mode_moments.mode[0], theta)
+#             cleaned_image = cleanup_image(binary_image, kernel_shape, kernel_size)
+#             mhi.update_m_at_t(cleaned_image, t)
+#         # moments = fn.get_moments_binary(mhi.MT[t])
+#         # central_moments = fn.get_central_moments_binary(moments, mhi.MT[t])
+#         # hu_moments = fn.get_hu_moments(central_moments)
+#             normalized = normalize_and_scale(mhi.MT[t])
+#             video_out.write(normalized.astype(np.uint8))
+#         else:
+#             motion_history.append(gray_frm1)
+#         gray_frm1 = gray_frm2
+#         fr += 1
+#     video_out.release()
 
-def final_experiment():
-    theta = 50
-    tau = 15
-    kernel_shape = cv2.MORPH_ELLIPSE
-    kernel_size = (2, 2)
-    fps = 25
+## single
+# def final_experiment():
+#     theta = 50
+#     tau = 15
+#     kernel_shape = cv2.MORPH_ELLIPSE
+#     kernel_size = (2, 2)
+#     fps = 25
+#
+#     video = load_video('person15_walking_d1_uncomp.avi')
+#     video_frames = video_frame_generator(video)
+#     frame1 = video_frames.__next__()
+#     gray_frm1 = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
+#     mhi = motion.MotionHistoryImage(tau, gray_frm1)
+#
+#     h, w, d = frame1.shape
+#     video_out = mp4_video_writer(VIDEO_NAME, (w, h), fps, False)
+#
+#     fr = 1
+#     while frame1 is not None:
+#         t = fr % tau
+#         frame2 = video_frames.__next__()
+#         if frame2 is None:
+#             break
+#         gray_frm2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
+#         binary_image = fn.get_frame_diff_binary(gray_frm2, gray_frm1, theta)
+#         cleaned_image = cleanup_image(binary_image, kernel_shape, kernel_size)
+#         mhi.update_m_at_t(cleaned_image, t)
+#         # moments = fn.get_moments_binary(mhi.MT[t])
+#         # central_moments = fn.get_central_moments_binary(moments, mhi.MT[t])
+#         # hu_moments = fn.get_hu_moments(central_moments)
+#         if fr >= tau:
+#             normalized = normalize_and_scale(mhi.MT[t])
+#             video_out.write(normalized.astype(np.uint8))
+#         fr += 1
+#     video_out.release()
 
-    video = load_video('person15_walking_d1_uncomp.avi')
-    video_frames = video_frame_generator(video)
-    frame1 = video_frames.__next__()
-    gray_frm1 = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
-    mhi = motion.MotionHistoryImage(tau, gray_frm1)
 
-    h, w, d = frame1.shape
-    video_out = mp4_video_writer(VIDEO_NAME, (w, h), fps, False)
+##mean
+# def final_experiment():
+#     theta = 50
+#     tau = 15
+#     kernel_shape = cv2.MORPH_ELLIPSE
+#     kernel_size = (2, 2)
+#     fps = 25
+#
+#     video = load_video('person15_walking_d1_uncomp.avi')
+#     video_frames = video_frame_generator(video)
+#     frame1 = video_frames.__next__()
+#     gray_frm1 = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
+#     mhi = motion.MotionHistoryImage(tau, gray_frm1)
+#
+#     h, w, d = frame1.shape
+#     video_out = mp4_video_writer(VIDEO_NAME, (w, h), fps, False)
+#
+#     motion_history = []
+#     fr = 1
+#     while frame1 is not None:
+#         t = fr % tau
+#         frame2 = video_frames.__next__()
+#         if frame2 is None:
+#             break
+#         gray_frm2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
+#         if fr >= tau:
+#             motion_history[:-1] = motion_history[1:]
+#             motion_history[-1] = gray_frm1
+#             mean_moments = np.mean(motion_history, axis=0)
+#             binary_image = fn.get_frame_diff_binary(gray_frm2, mean_moments.astype(np.uint8), theta)
+#             cleaned_image = cleanup_image(binary_image, kernel_shape, kernel_size)
+#             mhi.update_m_at_t(cleaned_image, t)
+#         # moments = fn.get_moments_binary(mhi.MT[t])
+#         # central_moments = fn.get_central_moments_binary(moments, mhi.MT[t])
+#         # hu_moments = fn.get_hu_moments(central_moments)
+#             normalized = normalize_and_scale(mhi.MT[t])
+#             video_out.write(normalized.astype(np.uint8))
+#         else:
+#             motion_history.append(gray_frm1)
+#         gray_frm1 = gray_frm2
+#         fr += 1
+#     video_out.release()
 
-    motion_history = []
-    fr = 1
-    while frame1 is not None:
-        t = fr % tau
-        frame2 = video_frames.__next__()
-        if frame2 is None:
-            break
-        gray_frm2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
-        if fr >= tau:
-            motion_history[:-1] = motion_history[1:]
-            motion_history[-1] = gray_frm1
-            mode_moments = stats.mode(motion_history)
-            binary_image = fn.get_frame_diff_binary(gray_frm2, mode_moments.mode[0], theta)
-            cleaned_image = cleanup_image(binary_image, kernel_shape, kernel_size)
-            mhi.update_m_at_t(cleaned_image, t)
-        # moments = fn.get_moments_binary(mhi.MT[t])
-        # central_moments = fn.get_central_moments_binary(moments, mhi.MT[t])
-        # hu_moments = fn.get_hu_moments(central_moments)
-            normalized = normalize_and_scale(mhi.MT[t])
-            video_out.write(normalized.astype(np.uint8))
-        else:
-            motion_history.append(gray_frm1)
-        gray_frm1 = gray_frm2
-        fr += 1
-    video_out.release()
+
+# # median
+# def final_experiment():
+#     theta = 50
+#     tau = 15
+#     kernel_shape = cv2.MORPH_ELLIPSE
+#     kernel_size = (2, 2)
+#     fps = 25
+#
+#     video = load_video('person15_walking_d1_uncomp.avi')
+#     video_frames = video_frame_generator(video)
+#     frame1 = video_frames.__next__()
+#     gray_frm1 = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
+#     mhi = motion.MotionHistoryImage(tau, gray_frm1)
+#
+#     h, w, d = frame1.shape
+#     video_out = mp4_video_writer(VIDEO_NAME, (w, h), fps, False)
+#
+#     motion_history = []
+#     fr = 1
+#     while frame1 is not None:
+#         t = fr % tau
+#         frame2 = video_frames.__next__()
+#         if frame2 is None:
+#             break
+#         gray_frm2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
+#         if fr >= tau:
+#             motion_history[:-1] = motion_history[1:]
+#             motion_history[-1] = gray_frm1
+#             mean_moments = np.median(motion_history, axis=0)
+#             binary_image = fn.get_frame_diff_binary(gray_frm2, mean_moments.astype(np.uint8), theta)
+#             cleaned_image = cleanup_image(binary_image, kernel_shape, kernel_size)
+#             mhi.update_m_at_t(cleaned_image, t)
+#         # moments = fn.get_moments_binary(mhi.MT[t])
+#         # central_moments = fn.get_central_moments_binary(moments, mhi.MT[t])
+#         # hu_moments = fn.get_hu_moments(central_moments)
+#             normalized = normalize_and_scale(mhi.MT[t])
+#             video_out.write(normalized.astype(np.uint8))
+#         else:
+#             motion_history.append(gray_frm1)
+#         gray_frm1 = gray_frm2
+#         fr += 1
+#     video_out.release()
 
 
 def cleanup_image(binary_image, kernel_shape, kernel_size):
